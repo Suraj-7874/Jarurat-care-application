@@ -171,7 +171,7 @@ Screenshots
 | Page                        | Preview                                               |
 | --------------------------- | ----------------------------------------------------- |
 | 🏠 **Home Page**            | ![Home](./src/screenshots/Home.png)                     |
-| 👥 **Patients Dashboard**   | ![Patients](./src/screenshots/Patients.png)             |
+| 👥 **Patients Dashboard**   | ![Patients](./src/screenshots/Patient.png)             |
 | 🔍 **Search by Name**       | ![SearchByName](./src/screenshots/SearchByName.png)     |
 | 📄 **View Patient Details** | ![ViewDetails](./src/screenshots/ViewDetails.png)       |
 | ➕ **Add New Patient**       | ![NewPatient](./src/screenshots/NewPatient.png)         |
@@ -180,4 +180,18 @@ Screenshots
 | 🔐 **Admin Login**          | ![AdminLogin](./src/screenshots/AdminLogin.png)         |
 | 🩺 **Admin Dashboard**      | ![AdminDashboard](./src/screenshots/AdminDashboard.png) |
 | ℹ️ **About Page**           | ![About](./src/screenshots/About.png)                   |
+
+
+
+
+## 👨‍💻 Maintainer
+👤 Name: Suraj
+📫 Email: Survesuraj38@gmail.com
+
+
+
+
+
+
+
 
