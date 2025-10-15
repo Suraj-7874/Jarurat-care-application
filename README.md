@@ -168,7 +168,6 @@ Where to manage patients in code:
 - Email/notification workflows
 
 Screenshots
-```
 | Page                        | Preview                                               |
 | --------------------------- | ----------------------------------------------------- |
 | 🏠 **Home Page**            | ![Home](./src/screenshots/Home.png)                     |
