@@ -36,3 +36,128 @@
     transform: rotate(360deg);
   }
 }
+
+/* Home animations */
+.home-title {
+  animation: title-pop 900ms ease-out both;
+}
+
+.home-subtitle {
+  animation: subtitle-fade 1200ms 150ms ease-out both;
+}
+
+@keyframes title-pop {
+  0% { transform: translateY(12px) scale(0.98); opacity: 0; }
+  60% { transform: translateY(0) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes subtitle-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.caption-fade { animation: subtitle-fade 900ms ease-out both; }
+.caption-slide { animation: rise-up 900ms 120ms ease-out both; }
+
+@keyframes rise-up {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-wave {
+  display: inline-block;
+  position: relative;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1.2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-1.2deg); }
+}
+
+.animate-rise { animation: rise-up 700ms ease-out both; }
+
+/* Constrain Home carousel height */
+.home-carousel .carousel-item {
+  max-height: 500px;
+}
+.home-carousel .carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .home-carousel .carousel-item { max-height: 500px; }
+  .home-carousel .carousel-item img { height: 500px; }
+}
+
+/* Theme */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f7f9fc;
+  color: #1f2a44;
+}
+
+.navbar.bg-primary {
+  background: linear-gradient(90deg, #4f46e5, #22c55e);
+  box-shadow: 0 6px 24px rgba(31, 42, 68, 0.25);
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+  position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 200ms ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Patient card hover/animation */
+.card.shadow-sm {
+  transition: transform 180ms ease, box-shadow 200ms ease, filter 200ms ease;
+  border: 0;
+  border-radius: 14px;
+}
+
+.card.shadow-sm:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(31, 42, 68, 0.18);
+  filter: saturate(1.05);
+}
+
+/* Buttons */
+.btn-primary {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+.btn-primary:hover { background: #4338ca; border-color: #4338ca; }
+.btn-success { background: #22c55e; border-color: #22c55e; }
+.btn-success:hover { background: #16a34a; border-color: #16a34a; }
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1060;
+}

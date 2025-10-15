@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+## 🌿 Jarurat Care — Patient Records Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern, responsive React app to browse and manage patient records with search, detail modals, and an optional add‑patient flow. Clean UI, smooth animations, and mobile‑first design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### ✨ Highlights
+- 🏠 Animated Home with image carousel and hero text
+- 👥 Patients dashboard with search, responsive cards, and details modal
+- ➕ Add New Patient (local state) with success toast
+- 🔗 URL routing via React Router v6
+- 🎨 Polished theme with Poppins font and subtle animations
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🧰 Tech Stack
+| Tool | Purpose |
+|------|---------|
+| React (CRA) | Component-based frontend |
+| React Router v6 | Routing and navigation |
+| Bootstrap 5 (CDN) | Layout, grid, components |
+| Custom CSS | Animations, theming |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 🚀 Quick Start
+1) Install dependencies
+```
+npm install
+```
+2) Start the dev server
+```
+npm start
+```
+3) Open in browser
+```
+http://localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 📁 Project Structure
+```
+src/
+  components/      Header, PatientCard, PatientDetailsModal, AddPatientForm
+  pages/           Home, Patients, About
+  context/         PatientContext (data, search, selection)
+  App.js           Routes and layout
+  App.css          Theme + animations
+public/
+  img/             Carousel images and assets
+  index.html       Bootstrap CDN, fonts
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔍 Key Features
+- Fetch patients from JSONPlaceholder and map to mock patient fields
+- Filter by name with instant search
+- Card hover lift + shadow animations
+- Modal with patient details (contact, email, address)
+- Success toast after adding a new patient
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### 🛠 Customization
+- Branding: replace `/logo.png` and assets in `public/img`
+- Colors & Fonts: adjust theme in `src/App.css` (Poppins by default)
+- Data: update fetch in `src/context/PatientContext.js`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Admin Credentials
+- Username: `suraj`
+- Password: `suraj123`
+- Change credentials in: `src/context/PatientContext.js` (search for `login`)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔐 Admin Mode
+Admin mode unlocks patient management (add, edit, remove).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Login route: `/admin`
+- After login, visit `/patients` to manage records
+- Admin-only UI:
+  - Add New Patient button and form
+  - Edit button on each patient card (opens modal)
+  - Remove button on each patient card
+- Logout from the navbar to exit admin mode
 
-## Learn More
+Change credentials:
+```startLine:endLine:src/context/PatientContext.js
+  const login = (username, password) => {
+    const ok = username === 'suraj' && password === 'suraj123';
+    if (ok) {
+      setIsAdmin(true);
+      try { localStorage.setItem('jc_is_admin', '1'); } catch {}
+      return true;
+    }
+    return false;
+  };
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Where to manage patients in code:
+- Add/Update/Remove functions live in `src/context/PatientContext.js` (`addPatient`, `updatePatient`, `removePatient`)
+- Edit modal and list UI are in `src/pages/Patients.js`
+- Card actions are in `src/components/PatientCard.js`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### 🗺 Routes
+- `/` Home
+- `/patients` Patients dashboard
+- `/about` About Jarurat Care
+- `/admin` Admin login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 📌 Notes
+- Demo app with mock data only; no real backend writes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### 🧭 Roadmap
+- Auth (admin)
+- Backend integration (Node + DB)
+- Analytics and reporting
+- Email/notification workflows
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Screenshots
+```
+| Page                        | Preview                                               |
+| --------------------------- | ----------------------------------------------------- |
+| 🏠 **Home Page**            | ![Home](src/screenshots/Home.png)                     |
+| 👥 **Patients Dashboard**   | ![Patients](src/screenshots/Patients.png)             |
+| 🔍 **Search by Name**       | ![SearchByName](src/screenshots/SearchByName.png)     |
+| 📄 **View Patient Details** | ![ViewDetails](src/screenshots/ViewDetails.png)       |
+| ➕ **Add New Patient**       | ![NewPatient](src/screenshots/NewPatient.png)         |
+| ✏️ **Edit Patient**         | ![EditPatient](src/screenshots/EditPatient.png)       |
+| ❌ **Remove Patient**        | ![RemovePatient](src/screenshots/RemovePatient.png)   |
+| 🔐 **Admin Login**          | ![AdminLogin](src/screenshots/AdminLogin.png)         |
+| 🩺 **Admin Dashboard**      | ![AdminDashboard](src/screenshots/AdminDashboard.png) |
+| ℹ️ **About Page**           | ![About](src/screenshots/About.png)                   |
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
