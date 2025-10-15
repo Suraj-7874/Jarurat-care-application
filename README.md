@@ -41,15 +41,57 @@ http://localhost:3000
 
 ### 📁 Project Structure
 ```
-src/
-  components/      Header, PatientCard, PatientDetailsModal, AddPatientForm
-  pages/           Home, Patients, About
-  context/         PatientContext (data, search, selection)
-  App.js           Routes and layout
-  App.css          Theme + animations
-public/
-  img/             Carousel images and assets
-  index.html       Bootstrap CDN, fonts
+jarurat-care-dashboard/
+├── public/
+│   ├── img/                     # Carousel images (Home page)
+│   ├── logo.png                 # Navbar logo
+│   ├── favicon.ico
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── components/              # Reusable UI components
+│   │   ├── AddPatientForm.js
+│   │   ├── Header.js
+│   │   ├── PatientCard.js
+│   │   └── PatientDetailsModal.js
+│   │
+│   ├── pages/                   # Route pages
+│   │   ├── Home.js
+│   │   ├── Patients.js
+│   │   ├── About.js
+│   │   └── AdminLogin.js
+│   │
+│   ├── context/                 # Global state (React Context)
+│   │   └── PatientContext.js
+│   │
+│   ├── screenshots/             # App preview images for README
+│   │   ├── Home.png
+│   │   ├── Patients.png
+│   │   ├── SearchByName.png
+│   │   ├── ViewDetails.png
+│   │   ├── NewPatient.png
+│   │   ├── EditPatient.png
+│   │   ├── RemovePatient.png
+│   │   ├── AdminLogin.png
+│   │   ├── AdminDashboard.png
+│   │   └── About.png
+│   │
+│   ├── imges/                   # (Optional / Typo folder) consider renaming to 'images'
+│   │   ├── logo.png
+│   │   └── logo1.svg
+│   │
+│   ├── App.js                   # Root React component
+│   ├── App.css                  # Global styles and theme
+│   └── index.js                 # Entry point
+│
+├── .gitignore                   # Ignored files/folders
+├── package.json                 # Dependencies and scripts
+├── README.md                    # Project documentation
+└── package-lock.json
+
 ```
 
 ---
