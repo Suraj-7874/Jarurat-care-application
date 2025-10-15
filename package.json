@@ -1,5 +1,6 @@
 {
-  "homepage": "https:suraj-7874.github.io/Jarurat-care-application",
+  "homepage": "https://suraj-7874.github.io/Jarurat-care-application",
+
   "name": "my-patient-app",
   "version": "0.1.0",
   "private": true,
@@ -20,8 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-
+  "deploy": "gh-pages -d build"
+    
+    
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
