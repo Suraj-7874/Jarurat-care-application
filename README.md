@@ -171,14 +171,14 @@ Screenshots
 ```
 | Page                        | Preview                                               |
 | --------------------------- | ----------------------------------------------------- |
-| 🏠 **Home Page**            | ![Home](src/screenshots/Home.png)                     |
-| 👥 **Patients Dashboard**   | ![Patients](src/screenshots/Patients.png)             |
-| 🔍 **Search by Name**       | ![SearchByName](src/screenshots/SearchByName.png)     |
-| 📄 **View Patient Details** | ![ViewDetails](src/screenshots/ViewDetails.png)       |
-| ➕ **Add New Patient**       | ![NewPatient](src/screenshots/NewPatient.png)         |
-| ✏️ **Edit Patient**         | ![EditPatient](src/screenshots/EditPatient.png)       |
-| ❌ **Remove Patient**        | ![RemovePatient](src/screenshots/RemovePatient.png)   |
-| 🔐 **Admin Login**          | ![AdminLogin](src/screenshots/AdminLogin.png)         |
-| 🩺 **Admin Dashboard**      | ![AdminDashboard](src/screenshots/AdminDashboard.png) |
-| ℹ️ **About Page**           | ![About](src/screenshots/About.png)                   |
+| 🏠 **Home Page**            | ![Home](./src/screenshots/Home.png)                     |
+| 👥 **Patients Dashboard**   | ![Patients](./src/screenshots/Patients.png)             |
+| 🔍 **Search by Name**       | ![SearchByName](./src/screenshots/SearchByName.png)     |
+| 📄 **View Patient Details** | ![ViewDetails](./src/screenshots/ViewDetails.png)       |
+| ➕ **Add New Patient**       | ![NewPatient](./src/screenshots/NewPatient.png)         |
+| ✏️ **Edit Patient**         | ![EditPatient](./src/screenshots/EditPatient.png)       |
+| ❌ **Remove Patient**        | ![RemovePatient](./src/screenshots/RemovePatient.png)   |
+| 🔐 **Admin Login**          | ![AdminLogin](./src/screenshots/AdminLogin.png)         |
+| 🩺 **Admin Dashboard**      | ![AdminDashboard](./src/screenshots/AdminDashboard.png) |
+| ℹ️ **About Page**           | ![About](./src/screenshots/About.png)                   |
 
