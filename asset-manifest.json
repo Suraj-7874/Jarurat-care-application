@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Jarurat-care-application/static/css/main.e925b046.css",
+    "main.js": "/Jarurat-care-application/static/js/main.dd39d1d7.js",
+    "static/js/453.b1fb94a0.chunk.js": "/Jarurat-care-application/static/js/453.b1fb94a0.chunk.js",
+    "index.html": "/Jarurat-care-application/index.html",
+    "main.e925b046.css.map": "/Jarurat-care-application/static/css/main.e925b046.css.map",
+    "main.dd39d1d7.js.map": "/Jarurat-care-application/static/js/main.dd39d1d7.js.map",
+    "453.b1fb94a0.chunk.js.map": "/Jarurat-care-application/static/js/453.b1fb94a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e925b046.css",
+    "static/js/main.dd39d1d7.js"
+  ]
+}
